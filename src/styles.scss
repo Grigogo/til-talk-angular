@@ -1,9 +1,11 @@
 @import "fonts";
+@import "margins";
 
 :root {
   --dark-color: #000000;
   --light-color: #ffffff;
   --primary-color: #AE7AFF;
+  --grey-color: #5F646D;
 }
 
 *,
@@ -18,6 +20,8 @@ body {
   font-family: "JetBrains Mono", sans-serif;
   background: var(--dark-color);
   color: var(--light-color);
+  height: 100vh;
+  background: center / cover no-repeat url(/assets/images/bg_img_big.png);
 }
 
 .skill-tag {
@@ -32,6 +36,7 @@ body {
 }
 
 .button {
+  width: 100%;
   border: none;
   background: var(--primary-color);
   color: var(--dark-color);
@@ -39,6 +44,31 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid var(--dark-color)
+}
+
+.button-shadow {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background: var(--grey-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    z-index: -1;
+  }
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
 }
 
 .h6 {
@@ -50,4 +80,31 @@ body {
 .subtitle {
   font-size: 14px;
   line-height: 20px;
+}
+
+.login-form {
+  width: 400px;
+}
+
+.tt-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.tt-input {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  display: block;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  background: var(--dark-color);
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 21px;
+  font-family: "JetBrains Mono", sans-serif;
+  color: var(--light-color);
 }
